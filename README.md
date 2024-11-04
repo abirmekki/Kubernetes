@@ -282,3 +282,15 @@ gedit kust/service.yaml
 gedit kust/kustomization.yaml
 ```
 ![image](https://github.com/user-attachments/assets/dfab289c-7902-4fb6-aea8-e52f96114e2b)
+
+ ### Project Tree :
+|__ kust
+   	|__ deployment.yaml
+    	|__ service.yaml
+   	|__ kustomization.yaml
+
+![image](https://github.com/user-attachments/assets/ae6c91ae-bd86-463c-b78e-b8548d6b68fd)
+
+### 6.	apply and generate k8s resources from kustomize 
+![image](https://github.com/user-attachments/assets/90007755-848c-4ef4-9c9a-b46eb8310701)
+
