@@ -92,9 +92,9 @@ sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address
 ```
 ### 2.	set up kubectl for user :
  ```bash
-$mkdir -p $HOME/.kube
-$sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-$sudo chown $(id -u):$(id -g) $HOME/.kube/config
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 ### 3.	Using Weave Net :
  ```bash
@@ -285,9 +285,9 @@ gedit kust/kustomization.yaml
 
  ### Project Tree :
 |__ kust
-   	|__ deployment.yaml
-    	|__ service.yaml
-   	|__ kustomization.yaml
+- |__ deployment.yaml
+- |__ service.yaml
+- |__ kustomization.yaml
 
 ![image](https://github.com/user-attachments/assets/ae6c91ae-bd86-463c-b78e-b8548d6b68fd)
 
