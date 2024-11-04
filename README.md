@@ -203,9 +203,10 @@ gedit deployment.yaml
 ![image](https://github.com/user-attachments/assets/2b2a5bd2-8baa-4a2f-9adf-e12b9a50594f)
 
 * Apply deployment file :
- ```bash
+```bash
 kubectl apply -f deployment.yaml 
- ```
+```
+
 * Verify
   ![image](https://github.com/user-attachments/assets/d4ada9df-f7c9-4f2b-8e5b-0a4e3896e139)
   
@@ -213,7 +214,7 @@ kubectl apply -f deployment.yaml
 
 ## Deploy with Helm chart 
  ### 1.	Install Helm : Using Package Manager (Debian/Ubuntu):
-  ```bash
+```bash
 sudo snap install helm –classic
  ```
 ### 2.	Verify Installation :
