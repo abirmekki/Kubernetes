@@ -249,3 +249,36 @@ kubectl get service -n deployment
  ```
 ![image](https://github.com/user-attachments/assets/ae4279ee-5853-4fee-aeaa-bb3ce3a02151)
 
+### 6.	Access  to Grafana
+![image](https://github.com/user-attachments/assets/2edd4944-12f3-4eeb-bd83-f77bfcfbf9e3)
+
+## Management of Kubernetes Objects Using Kustomize
+
+### 1.	Installation of kustomize
+ ```bash
+curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh" | bash
+sudo mv kustomize /usr/local/bin
+ ```
+
+### 2.	Create Repo ‘Kust’
+ ```bash
+mkdir Kust
+ ```
+
+### 3.	Create Deployment file 'deployment.yaml'
+ ```bash
+gedit kust/deployment.yaml
+ ```
+![image](https://github.com/user-attachments/assets/b95e671d-7eea-415f-ae37-3ba1be70589b)
+
+### 4.	Create service file 'service.yaml'
+ ```bash
+gedit kust/service.yaml
+ ```
+![image](https://github.com/user-attachments/assets/9a7a05e6-3498-4c64-bcdd-176cce43175a)
+
+### 5.	Create kustomize file 'kustomization.yaml'
+ ```bash
+gedit kust/kustomization.yaml
+```
+![image](https://github.com/user-attachments/assets/dfab289c-7902-4fb6-aea8-e52f96114e2b)
