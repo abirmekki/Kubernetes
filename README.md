@@ -221,3 +221,11 @@ sudo snap install helm –classic
 helm version
  ```
 ![image](https://github.com/user-attachments/assets/df3e875c-d883-417c-bac1-d2e352dece10)
+
+ ### 3.	Add the Helm Repository :
+Helm repo is a collections of Helm charts that provide pre-configured kubernetes resources for popular apps to deploy and manage app on k8s.
+ ```bash
+helm repo add stable https://charts.helm.sh/stable
+helm repo update
+ ```
+
