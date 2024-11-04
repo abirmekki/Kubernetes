@@ -25,7 +25,7 @@
 Installing a container runtime (on master and worker) :
 * Enable IPv4 packet forwarding
 *  Verify 
-# Containerd :  follow the instructions on getting started with containerd 
+# Containerd : Instructions getting started with containerd 
 
 https://github.com/containerd/containerd/blob/main/docs/getting-started.md
 
