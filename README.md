@@ -230,4 +230,22 @@ Helm repo is a collections of Helm charts that provide pre-configured kubernetes
 helm repo add stable https://charts.helm.sh/stable
 helm repo update
  ```
+![image](https://github.com/user-attachments/assets/25b8a932-a836-432d-ae33-255df3d57c9f)
+
+![image](https://github.com/user-attachments/assets/ca958bdc-0478-4fea-8bc9-01e9e8ada1fe)
+
+![image](https://github.com/user-attachments/assets/4c9d9a14-bc16-462f-9fde-abbbd1dce80b)
+
+### 4.	Change Type from ClusterIP to NodePort :
+
+ ```bash
+KUBE_EDITOR= ‘’nano’’ kubectl edit service my-grafana
+ ```
+![image](https://github.com/user-attachments/assets/047db804-7d2b-467f-9f1a-5bda17ae5ccd)
+
+### 5.	Verify
+ ```bash
+kubectl get service -n deployment
+ ```
+![image](https://github.com/user-attachments/assets/ae4279ee-5853-4fee-aeaa-bb3ce3a02151)
 
