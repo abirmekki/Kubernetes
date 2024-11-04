@@ -43,10 +43,47 @@ There are two cgroup drivers available :
 *	systemd
 kublet and container runtime must use the same driver, they have to both match
 if you use systemd init system you must use systemd driver
-we set both of them to systemd : to verify the init system    $ps -p 1
-Configuring the systemd cgroup driver : add the config to /etc/containerd/config.toml
+we set both of them to systemd : to verify the init system  ->  $ps -p 1
+* Configuring the systemd cgroup driver : add the config to /etc/containerd/config.toml
 ```bash
 [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc]
   [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options]
     SystemdCgroup = true
+```
+
+```bash
+# restart containerd service
+sudo systemctl restart containerd 
+```
+
+## Installing Kubeadm, kublet and kubectl (Master & Worker)
+-	Update the apt package index and install packages needed to use the Kubernetes apt repository:
+-	```bash
+sudo apt-get update
+```
+# apt-transport-https may be a dummy package; if so, you can skip #that package
+```bash
+sudo apt-get install -y apt-transport-https ca-certificates curl gpg
+```
+
+-	Download the public signing key for the Kubernetes package repositories.
+```bash
+# If the directory `/etc/apt/keyrings` does not exist, it should be #created before the curl command, read the note below.
+# sudo mkdir -p -m 755 /etc/apt/keyrings
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+```
+-	Add the appropriate Kubernetes apt repository
+```bash
+# This overwrites any existing configuration in #/etc/apt/sources.list.d/kubernetes.list
+echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.31/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+```
+-	Update the apt package index, install kubelet, kubeadm and kubectl, and pin their version:
+```bash
+sudo apt-get update
+sudo apt-get install -y kubelet kubeadm kubectl
+sudo apt-mark hold kubelet kubeadm kubectl
+```
+-	(Optional) Enable the kubelet service before running kubeadm:
+```bash
+sudo systemctl enable --now kubelet
 ```
