@@ -208,9 +208,10 @@ kubectl apply -f deployment.yaml
 ```
 
 * Verify
-  ![image](https://github.com/user-attachments/assets/d4ada9df-f7c9-4f2b-8e5b-0a4e3896e139)
+
+![image](https://github.com/user-attachments/assets/d4ada9df-f7c9-4f2b-8e5b-0a4e3896e139)
   
-  ![image](https://github.com/user-attachments/assets/17a4fdf0-5dfb-4de0-889c-1951389e6e02)
+![image](https://github.com/user-attachments/assets/17a4fdf0-5dfb-4de0-889c-1951389e6e02)
 
 ## Deploy with Helm chart 
  ### 1.	Install Helm : Using Package Manager (Debian/Ubuntu):
