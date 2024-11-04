@@ -34,7 +34,9 @@ At first you must install docker engine on Ubuntu :
 *	Set up Docker's apt repository.
 *	update
 *	Install the Docker packages :  install the latest version : 
+```bash
 sudo apt-get install docker-ce docker-ce-cli containerd.io
+```
 *	Verify that the Docker Engine installation is successful
 *	Systemctl status containerd
 # cgroup drivers :
