@@ -4,11 +4,7 @@
 *	2 CPU ou plus pour les machines de plan de contrôle.
 *	Connectivité réseau complète entre toutes les machines du cluster.
 *	Nom d’hôte unique, adresse MAC.
-## Install K8S with Kubeadm :
-### 1.	Installing Kubeadm :
-Installing a container runtime (on master and worker) :
-* Enable IPv4 packet forwarding
-*  Verify 
+
 *	 Master :
   
 ![image](https://github.com/user-attachments/assets/cdb1b72a-eadc-40a4-b6ec-f0c7e0e03c5b)
@@ -25,6 +21,24 @@ Installing a container runtime (on master and worker) :
 
 ![image](https://github.com/user-attachments/assets/afd98a09-8d7e-4e4f-936a-85a8824413c2)
 
+## Install K8S with Kubeadm :
+### 1.	Installing Kubeadm :
+Installing a container runtime (on master and worker) :
+* Enable IPv4 packet forwarding
+  ```bash
+  # sysctl params required by setup, params persist across reboots
+cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
+net.ipv4.ip_forward = 1
+EOF
+
+# Apply sysctl params without reboot
+sudo sysctl --system
+```
+*  Verify
+ ```bash
+# Verify that net.ipv4.ip_forward is set to 1
+sysctl net.ipv4.ip_forward
+  ```
 
 # Containerd : Instructions getting started with containerd 
 
