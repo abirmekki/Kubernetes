@@ -196,7 +196,7 @@ kubectl config set-context --current --namespace= development
 ```
 ### 3.	Deploy app with kubectl on namespace « development » :
 *	Create a deployment YAML file :
-    ```bash
+```bash    
 touch deployment.yaml
 gedit deployment.yaml
  ```
