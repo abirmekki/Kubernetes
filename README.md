@@ -190,3 +190,34 @@ kubectl create namespace development
 kubectl get namespaces
 ```
 ![image](https://github.com/user-attachments/assets/a6427366-a216-49b1-96f4-07c2a8b5f7c0)
+### 2.	Switch to the new namespace :
+ ```bash
+kubectl config set-context --current --namespace= development
+```
+### 3.	Deploy app with kubectl on namespace « development » :
+*	Create a deployment YAML file :
+    ```bash
+touch deployment.yaml
+gedit deployment.yaml
+ ```
+![image](https://github.com/user-attachments/assets/2b2a5bd2-8baa-4a2f-9adf-e12b9a50594f)
+
+* Apply deployment file :
+ ```bash
+kubectl apply -f deployment.yaml 
+ ```
+* Verify
+  ![image](https://github.com/user-attachments/assets/d4ada9df-f7c9-4f2b-8e5b-0a4e3896e139)
+  
+  ![image](https://github.com/user-attachments/assets/17a4fdf0-5dfb-4de0-889c-1951389e6e02)
+
+## Deploy with Helm chart 
+ ### 1.	Install Helm : Using Package Manager (Debian/Ubuntu):
+  ```bash
+sudo snap install helm –classic
+ ```
+### 2.	Verify Installation :
+ ```bash
+helm version
+ ```
+![image](https://github.com/user-attachments/assets/df3e875c-d883-417c-bac1-d2e352dece10)
