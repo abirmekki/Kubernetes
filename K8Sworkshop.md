@@ -83,7 +83,7 @@ There are two cgroup drivers available :
 *	systemd
 kublet and container runtime must use the same driver, they have to both match
 if you use systemd init system you must use systemd driver
-we set both of them to systemd : to verify the init system  ->   ``` ps -p  ```
+we set both of them to systemd : to verify the init system  ->   ``` ps -p1  ```
 * Configuring the systemd cgroup driver : add the config to /etc/containerd/config.toml
 ```bash
 [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc]
