@@ -125,7 +125,12 @@ sudo apt-mark hold kubelet kubeadm kubectl
 ```bash
 sudo systemctl enable --now kubelet
 ```
-## Creating a cluster with kubeadm In master node 
+## Creating a cluster with kubeadm In Master node :
+If swap is not supported by default on Kubernetes, disable the swap in the machine(master &  worker) with :
+
+ ```bash
+swapoff -a
+```
  ### 1.	Initializing your control-plane :
  ```bash
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=10.5.13.166
@@ -148,11 +153,7 @@ kubectl edit ds weave-net -n kube-system
 ```
 ![image](https://github.com/user-attachments/assets/ca1ef5c5-4ff0-4eda-9619-c0ceae26a06e)
 
-If swap is not supported by default on Kubernetes, disable the swap in the machine with :
 
- ```bash
-swapoff -a
-```
 ### 5.Join Worker Node :
 
  ```bash
