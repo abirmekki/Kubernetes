@@ -257,7 +257,7 @@ kubectl apply -f deployment.yaml
 ## Deploy with Helm chart 
  ### 1.	Install Helm : Using Package Manager (Debian/Ubuntu):
 ```bash
-sudo snap install helm –classic
+sudo snap install helm --classic
  ```
 ### 2.	Verify Installation :
  ```bash
