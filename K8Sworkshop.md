@@ -299,16 +299,22 @@ kubectl get service -n deployment
 mkdir mychart
 cd mychart
  ```
+![image](https://github.com/user-attachments/assets/09265881-3a79-4d7e-906c-f01bba40b7d0)
+
 ### Step 2: Create Chart.yaml
 ```bash
 touch Chart.yaml
 gedit Chart.yaml
  ```
+![image](https://github.com/user-attachments/assets/9098284b-4637-4ab6-b82c-8c6c3f4461f6)
+
 ### Step 3: Create values.yaml
 ```bash
 touch values.yaml
 gedit values.yaml
 ```
+![image](https://github.com/user-attachments/assets/8780caac-c705-4f14-aafe-799cc5e66c6b)
+
 ### Step 4: Create the templates Directory
 ```bash
 mkdir templates
@@ -318,19 +324,46 @@ mkdir templates
 touch templates/deployment.yaml
 gedit templates/deployment.yaml
 ```
+![image](https://github.com/user-attachments/assets/b6584f21-2f07-4e05-bdd6-83a8a8c97757)
+
 ### Step 6: Create templates/service.yaml 
 ```bash
 touch templates/service.yaml
 gedit templates/service.yaml
 ```
+![image](https://github.com/user-attachments/assets/49681678-dc51-44c7-a35d-a0690678a989)
+
 ### Step 7: Install the Chart
 ```bash
 helm install my-nginx ./mychart
 ```
+![image](https://github.com/user-attachments/assets/fc8830da-3b01-4476-9ae4-2818490c399e)
+
 ### Step 8: Access the Application
 ```bash
 kubectl port-forward svc/my-nginx-nginx 8080:80
 ```
+![image](https://github.com/user-attachments/assets/1c950c8a-8b39-40ca-a7ab-0ec056128dd4)
+
+![image](https://github.com/user-attachments/assets/a6a9a10c-0cd3-4392-8b94-b776a66b40b6)
+
+### Understand the Chart Structure:
+#### The generated chart will have the following structure:
+mychart/
+├── Chart.yaml
+├── values.yaml
+└── templates/
+    - ├── deployment.yaml
+    - └── service.yaml
+
+•	Chart.yaml: This is the main descriptor file for the Helm chart. It provides metadata about the chart, including its name, version, description, and other relevant information.
+•	values.yaml: This file contains the default configuration values for the chart. Users can override these values at install time or upgrade time to customize the behavior of the chart.
+•	templates/: This directory contains Kubernetes manifest templates that define the resources to be created when the chart is installed. Helm uses the Go templating engine to process these files.
+o	deployment.yaml: Defines the Deployment resource for the Nginx application.
+o	service.yaml: Defines the Service resource to expose the Nginx application.
+![image](https://github.com/user-attachments/assets/acfcdae9-9496-431b-b03b-9c9b303b41bf)
+
+
 ## Management of Kubernetes Objects Using Kustomize
 
 ### 1.	Installation of kustomize
