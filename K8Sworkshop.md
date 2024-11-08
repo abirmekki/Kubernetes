@@ -293,6 +293,44 @@ kubectl get service -n deployment
 ### 6.	Access  to Grafana
 ![image](https://github.com/user-attachments/assets/2edd4944-12f3-4eeb-bd83-f77bfcfbf9e3)
 
+## Manual Creation of a Helm Chart
+### Step 1: Create the Chart Directory
+```bash
+mkdir mychart
+cd mychart
+ ```
+### Step 2: Create Chart.yaml
+```bash
+touch Chart.yaml
+gedit Chart.yaml
+ ```
+### Step 3: Create values.yaml
+```bash
+touch values.yaml
+gedit values.yaml
+```
+### Step 4: Create the templates Directory
+```bash
+mkdir templates
+```
+### Step 5: Create templates/deployment.yaml
+```bash
+touch templates/service.yaml
+gedit templates/service.yaml
+```
+### Step 6: Create templates/service.yaml 
+```bash
+touch templates/service.yaml
+gedit templates/service.yaml
+```
+### Step 7: Install the Chart
+```bash
+helm install my-nginx ./mychart
+```
+### Step 8: Access the Application
+```bash
+kubectl port-forward svc/my-nginx-nginx 8080:80
+```
 ## Management of Kubernetes Objects Using Kustomize
 
 ### 1.	Installation of kustomize
