@@ -356,11 +356,12 @@ mychart/
     - ├── deployment.yaml
     - └── service.yaml
 
-•	Chart.yaml: This is the main descriptor file for the Helm chart. It provides metadata about the chart, including its name, version, description, and other relevant information.
-•	values.yaml: This file contains the default configuration values for the chart. Users can override these values at install time or upgrade time to customize the behavior of the chart.
-•	templates/: This directory contains Kubernetes manifest templates that define the resources to be created when the chart is installed. Helm uses the Go templating engine to process these files.
-o	deployment.yaml: Defines the Deployment resource for the Nginx application.
-o	service.yaml: Defines the Service resource to expose the Nginx application.
+- Chart.yaml: This is the main descriptor file for the Helm chart. It provides metadata about the chart, including its name, version, description, and other relevant information.
+- values.yaml: This file contains the default configuration values for the chart. Users can override these values at install time or upgrade time to customize the behavior of the chart.
+- templates/: This directory contains Kubernetes manifest templates that define the resources to be created when the chart is installed. Helm uses the Go templating engine to process these files.
+    - deployment.yaml: Defines the Deployment resource for the Nginx application.
+    - service.yaml: Defines the Service resource to expose the Nginx application.
+
 ![image](https://github.com/user-attachments/assets/acfcdae9-9496-431b-b03b-9c9b303b41bf)
 
 
