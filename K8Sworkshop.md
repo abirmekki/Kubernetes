@@ -350,9 +350,9 @@ kubectl port-forward svc/my-nginx-nginx 8080:80
 ### Understand the Chart Structure:
 #### The generated chart will have the following structure:
 mychart/
-├── Chart.yaml
-├── values.yaml
-└── templates/
+- ├── Chart.yaml
+- ├── values.yaml
+- └── templates/
     - ├── deployment.yaml
     - └── service.yaml
 
