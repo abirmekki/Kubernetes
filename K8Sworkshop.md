@@ -315,8 +315,8 @@ mkdir templates
 ```
 ### Step 5: Create templates/deployment.yaml
 ```bash
-touch templates/service.yaml
-gedit templates/service.yaml
+touch templates/deployment.yaml
+gedit templates/deployment.yaml
 ```
 ### Step 6: Create templates/service.yaml 
 ```bash
