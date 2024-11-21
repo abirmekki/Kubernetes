@@ -146,7 +146,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
  ```bash
 kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.29/net.yaml
 ```
-![image](https://github.com/user-attachments/assets/7a4eca5e-fa4a-44b6-a3f8-23b63fa8d227)
+![image](https://github.com/user-attachments/assets/1686070b-1a8d-40d3-a9d7-afed1dade60d)
 
 ### 4.	Configure internal cluster network
  ```bash
