@@ -205,19 +205,32 @@ kubectl taint nodes --all node-role.kubernetes.io/k8smaster-
 ```
 ![image](https://github.com/user-attachments/assets/32dc5a84-b191-4947-bbad-9942b2d86354)
 
-##  Deploy an nginx-pod :
-### 1.	Create yaml file : 
- ```bash
-touch nginx-pod.yaml
-gedit nginx-pod.yaml
+### 1. Use Node Selector :
+```bash
+kubectl label nodes master node-role.kubernetes.io/master=true
 ```
-![image](https://github.com/user-attachments/assets/7f5501f6-6eec-4e91-ba22-436238ee6c32)
+![1](https://github.com/user-attachments/assets/5a89e7b0-40aa-45fc-8887-6e69050cca02)
 
-### 2.	Deploy the pod :
-![image](https://github.com/user-attachments/assets/76c3ec18-5ad7-416d-a7cd-715515b38fae)
+### 2. Create yaml file  :
+```bash
+touch podMaster.yaml
+gedit podMaster.yaml
+```
+![2](https://github.com/user-attachments/assets/e0845c68-52a0-41d7-ac03-7a6e9f7ca429)
 
-### 3.	Verify deployment :
-![image](https://github.com/user-attachments/assets/8316b4cd-b712-4090-bf1e-167be25a763d)
+### 3. Deploy the Pod :
+```bash
+kubectl apply -f podMaster.yaml
+```
+![3](https://github.com/user-attachments/assets/7d43b374-1aae-478a-9ab8-b8c2f097cdc7)
+
+### 4. Verify the Pod :
+```bash
+kubectl get pods -o wide
+kubectl describe pod my-pod
+```
+![4](https://github.com/user-attachments/assets/5181cd70-ae55-4fd2-8119-571e12032912)
+![5](https://github.com/user-attachments/assets/8593c7a7-6de0-4601-ba99-6ef116ade18e)
 
 ### 4.	Access nginx :
 ![image](https://github.com/user-attachments/assets/24606a29-97c5-451b-a99e-10abcbb16551)
