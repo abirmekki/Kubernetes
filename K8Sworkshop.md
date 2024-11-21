@@ -233,7 +233,10 @@ kubectl describe pod my-pod
 
 ![5](https://github.com/user-attachments/assets/8593c7a7-6de0-4601-ba99-6ef116ade18e)
 
-### 5.	Access nginx :
+### 5.	Access the pod :
+```bash
+kubectl port-forward pod/my-pod 8081:80
+```
 ![image](https://github.com/user-attachments/assets/aea7db65-aae1-4ed0-9cf9-e835f121fbeb)
 
 ![image](https://github.com/user-attachments/assets/6b3c79bf-9064-4329-adb1-00366a1e22d6)
