@@ -38,6 +38,7 @@ sudo sysctl --system
 # Verify that net.ipv4.ip_forward is set to 1
 sysctl net.ipv4.ip_forward
   ```
+![image](https://github.com/user-attachments/assets/db5d13b0-a07e-4502-a4ad-2f98230da186)
 
 # Containerd : Instructions getting started with containerd 
 
