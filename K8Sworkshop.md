@@ -233,10 +233,10 @@ kubectl describe pod my-pod
 
 ![5](https://github.com/user-attachments/assets/8593c7a7-6de0-4601-ba99-6ef116ade18e)
 
-### 4.	Access nginx :
-![image](https://github.com/user-attachments/assets/24606a29-97c5-451b-a99e-10abcbb16551)
+### 5.	Access nginx :
+![image](https://github.com/user-attachments/assets/aea7db65-aae1-4ed0-9cf9-e835f121fbeb)
 
-![image](https://github.com/user-attachments/assets/3d0ed2eb-0d2f-458f-8fbb-8bab0fa4864d)
+![image](https://github.com/user-attachments/assets/6b3c79bf-9064-4329-adb1-00366a1e22d6)
 
 ## Create a namespace "Development" on your k8s cluster
 ### 1.	Create namespace 'development' :
