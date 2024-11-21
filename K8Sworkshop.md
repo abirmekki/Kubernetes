@@ -287,10 +287,14 @@ kubectl apply -f deployment.yaml
 ![image](https://github.com/user-attachments/assets/17a4fdf0-5dfb-4de0-889c-1951389e6e02)
 
 ## Deploy with Helm chart 
- ### 1.	Install Helm : Using Package Manager (Debian/Ubuntu):
+ ### 1.	Install Helm : From Script : 
+ #### script that will automatically grab the latest version of Helm and install it locally.
 ```bash
-sudo snap install helm --classic
- ```
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
+```
+
 ### 2.	Verify Installation :
  ```bash
 helm version
