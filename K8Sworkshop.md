@@ -206,9 +206,10 @@ k9s
 ```
 ![image](https://github.com/user-attachments/assets/a936b4a2-25ee-4957-a517-2f9d53f24b78)
 
-### 3.	Search inside k9s :
+#### 6.	Search inside k9s :
 
 ![image](https://github.com/user-attachments/assets/6a34bf20-a559-4064-9b1e-b2180acd998f)
+
 ![image](https://github.com/user-attachments/assets/4bec17ab-8eb2-4fdb-a632-b73084f594bf)
 
 ## Configure Master node to lunch pods
