@@ -180,14 +180,27 @@ kubeadm join 10.5.13.166:6443 --token tc03nq.nwh5wkojg319vpaa \
 ![image](https://github.com/user-attachments/assets/bce0b06a-60f1-47f3-8314-ffb02bb6f1f4)
 
 ##  Manage kubernetes cluster with k9s (real view of the cluster)
-### 1.	Download of k9s :
+### Installation of k9s via Binary Download :
+
+#### 1. Download the Latest Release:
 
  ```bash
-apt-get install snapd
-snap install k9s
+curl -sSL https://github.com/derailed/k9s/releases/latest/download/k9s_Linux_amd64.tar.gz -o k9s.tar.gz
 ```
+#### 2. Extract the Tarball :
+ ```bash
+tar -zxvf k9s.tar.gz
+```
+#### 3. Move the Binary :
 
-### 2. Lancer k9s :
+ ```bash
+sudo mv k9s /usr/local/bin/
+```
+#### 4. Make it Executable:
+ ```bash
+sudo chmod +x /usr/local/bin/k9s
+```
+#### 5. Lancer k9s :
  ```bash
 k9s
 ```
