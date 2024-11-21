@@ -230,6 +230,7 @@ kubectl get pods -o wide
 kubectl describe pod my-pod
 ```
 ![4](https://github.com/user-attachments/assets/5181cd70-ae55-4fd2-8119-571e12032912)
+
 ![5](https://github.com/user-attachments/assets/8593c7a7-6de0-4601-ba99-6ef116ade18e)
 
 ### 4.	Access nginx :
