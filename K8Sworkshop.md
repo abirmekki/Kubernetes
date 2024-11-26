@@ -179,6 +179,10 @@ kubeadm join 10.5.13.166:6443 --token tc03nq.nwh5wkojg319vpaa \
 ### Describe a node : ( the same for a pod) 
 ![image](https://github.com/user-attachments/assets/7865e47d-5772-40f5-8279-858949725b6d)
 
+### Delete a pod :
+![image](https://github.com/user-attachments/assets/652b4454-af84-4530-a325-52e259662c4d)
+
+
 ##  Manage kubernetes cluster with k9s (real view of the cluster)
 ### Installation of k9s via Binary Download :
 
@@ -257,7 +261,7 @@ gedit podMaster.yaml
 ```bash
 kubectl apply -f podMaster.yaml
 ```
-![3](https://github.com/user-attachments/assets/7d43b374-1aae-478a-9ab8-b8c2f097cdc7)
+![image](https://github.com/user-attachments/assets/339d0428-2863-4a44-af2a-647671fb3e79)
 
 #### 3. Verify the Pod :
 ```bash
@@ -296,7 +300,6 @@ kubectl apply -f podTolerance.yaml
 kubectl get pods -o wide
 ```
 ![image](https://github.com/user-attachments/assets/7ff62193-e125-4c3d-a793-8160ecd20b59)
-
 
 ## Create a namespace "Development" on your k8s cluster
 ### 1.	Create namespace 'development' :
