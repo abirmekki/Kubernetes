@@ -300,7 +300,8 @@ kubectl get pods -o wide
 kubectl create namespace development
 kubectl get namespaces
 ```
-![image](https://github.com/user-attachments/assets/a6427366-a216-49b1-96f4-07c2a8b5f7c0)
+![image](https://github.com/user-attachments/assets/82d9507d-4079-4ca2-85f0-ad899686f08c)
+
 ### 2.	Switch to the new namespace :
  ```bash
 kubectl config set-context --current --namespace= development
