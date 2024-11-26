@@ -458,9 +458,9 @@ curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack
 sudo mv kustomize /usr/local/bin
  ```
 
-### 2.	Create Repo ‘Kust’
+### 2.	Create Repo ‘kust’
  ```bash
-mkdir Kust
+mkdir kust
  ```
 
 ### 3.	Create Deployment file 'deployment.yaml'
@@ -490,5 +490,8 @@ gedit kust/kustomization.yaml
 ![image](https://github.com/user-attachments/assets/ae6c91ae-bd86-463c-b78e-b8548d6b68fd)
 
 ### 6.	apply and generate k8s resources from kustomize 
+ ```bash
+kubectl apply -k kust
+```
 ![image](https://github.com/user-attachments/assets/90007755-848c-4ef4-9c9a-b46eb8310701)
 
