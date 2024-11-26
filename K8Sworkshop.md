@@ -304,7 +304,7 @@ kubectl get namespaces
 
 ### 2.	Switch to the new namespace :
  ```bash
-kubectl config set-context --current --namespace= development
+kubectl config set-context --current --namespace=development
 ```
 ### 3.	Deploy app with kubectl on namespace « development » :
 *	Create a deployment YAML file :
