@@ -319,9 +319,8 @@ gedit deployment.yaml
 kubectl apply -f deployment.yaml 
 ```
 
-* Verify
-
-![image](https://github.com/user-attachments/assets/d4ada9df-f7c9-4f2b-8e5b-0a4e3896e139)
+* Verif
+![image](https://github.com/user-attachments/assets/e57b99bf-cdb8-413b-a201-aa24440fe2c5)
   
 ![image](https://github.com/user-attachments/assets/17a4fdf0-5dfb-4de0-889c-1951389e6e02)
 
