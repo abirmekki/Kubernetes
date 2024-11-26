@@ -171,13 +171,13 @@ kubeadm join 10.5.13.166:6443 --token tc03nq.nwh5wkojg319vpaa \
 ![image](https://github.com/user-attachments/assets/fc21952e-8efc-463a-88a1-b25bde547faf)
 
 ###  See pod running in specific node :
-![image](https://github.com/user-attachments/assets/af581da0-ff6f-47b6-a168-246c43ff152a)
+![image](https://github.com/user-attachments/assets/8b1574a2-e0d1-4d24-91ab-e6302c6960bb)
 
 ### Info of the cluster : 
 ![image](https://github.com/user-attachments/assets/bfaaea1f-c34a-407d-8fc0-7405de9150ac)
 
 ### Describe a node : ( the same for a pod) 
-![image](https://github.com/user-attachments/assets/bce0b06a-60f1-47f3-8314-ffb02bb6f1f4)
+![image](https://github.com/user-attachments/assets/7865e47d-5772-40f5-8279-858949725b6d)
 
 ##  Manage kubernetes cluster with k9s (real view of the cluster)
 ### Installation of k9s via Binary Download :
