@@ -168,7 +168,7 @@ kubeadm join 10.5.13.166:6443 --token tc03nq.nwh5wkojg319vpaa \
 ![image](https://github.com/user-attachments/assets/d34f3da5-6fb0-4e27-aebb-2e2a0b1a0261)
 
 ### See pods running in witch node : 
-![image](https://github.com/user-attachments/assets/fc21952e-8efc-463a-88a1-b25bde547faf)
+![image](https://github.com/user-attachments/assets/3e68b85b-1eb1-42c9-b52e-c19ffa4b1206)
 
 ###  See pod running in specific node :
 ![image](https://github.com/user-attachments/assets/8b1574a2-e0d1-4d24-91ab-e6302c6960bb)
