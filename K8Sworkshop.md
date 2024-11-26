@@ -346,7 +346,13 @@ helm repo update
  ```
 ![image](https://github.com/user-attachments/assets/25b8a932-a836-432d-ae33-255df3d57c9f)
 
-![image](https://github.com/user-attachments/assets/ca958bdc-0478-4fea-8bc9-01e9e8ada1fe)
+
+ ### 4.	Add grafana :
+ ```bash
+ helm repo add grafana https://grafana.github.io/helm-charts
+
+ ```
+![image](https://github.com/user-attachments/assets/9e04c6d9-0486-4d87-86a2-714af855d3fc)
 
 ![image](https://github.com/user-attachments/assets/4c9d9a14-bc16-462f-9fde-abbbd1dce80b)
 
