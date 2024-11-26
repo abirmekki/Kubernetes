@@ -170,7 +170,7 @@ kubeadm join 10.5.13.166:6443 --token tc03nq.nwh5wkojg319vpaa \
 ### See pods running in witch node : 
 ![image](https://github.com/user-attachments/assets/3e68b85b-1eb1-42c9-b52e-c19ffa4b1206)
 
-###  See pod running in specific node :
+###  See pods running in specific node (master) :
 ![image](https://github.com/user-attachments/assets/8b1574a2-e0d1-4d24-91ab-e6302c6960bb)
 
 ### Info of the cluster : 
