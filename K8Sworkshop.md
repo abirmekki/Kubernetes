@@ -272,14 +272,6 @@ kubectl describe pod my-pod-master
 
 ![image](https://github.com/user-attachments/assets/6cef363d-b8ad-4453-9dcf-dcba98f31559)
 
-#### 4.	Access the pod :
-```bash
-kubectl port-forward pod/my-pod-master 8081:80
-```
-![image](https://github.com/user-attachments/assets/542cc494-8c51-4dc2-adb9-9bce7a00ffb4)
-
-![image](https://github.com/user-attachments/assets/6b3c79bf-9064-4329-adb1-00366a1e22d6)
-
 ### Method 3 : Use Tolerations
 ####  keep the master node tainted but still allow specific pods to run on it
 #### 1. Create Pod Definition with Tolerations :
