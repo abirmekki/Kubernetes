@@ -347,30 +347,36 @@ helm repo update
 ![image](https://github.com/user-attachments/assets/25b8a932-a836-432d-ae33-255df3d57c9f)
 
 
- ### 4.	Add grafana :
+ ### 4.	Add & install grafana :
  ```bash
  helm repo add grafana https://grafana.github.io/helm-charts
-
+ helm install my-grafana grafana/grafana --namespace development
  ```
-![image](https://github.com/user-attachments/assets/9e04c6d9-0486-4d87-86a2-714af855d3fc)
+![image](https://github.com/user-attachments/assets/fe55c0f7-67c3-47dc-a1ba-2eb3a5464ad6)
 
-![image](https://github.com/user-attachments/assets/4c9d9a14-bc16-462f-9fde-abbbd1dce80b)
+![image](https://github.com/user-attachments/assets/1fd53bbd-57eb-4d5c-8ae6-d75f1843344f)
 
 ### 4.	Change Type from ClusterIP to NodePort :
 
  ```bash
-KUBE_EDITOR= ‘’nano’’ kubectl edit service my-grafana
+KUBE_EDITOR= ‘’nano’’ kubectl edit svc my-grafana -n development
  ```
-![image](https://github.com/user-attachments/assets/047db804-7d2b-467f-9f1a-5bda17ae5ccd)
 
 ### 5.	Verify
  ```bash
-kubectl get service -n deployment
+kubectl get svc -n development
  ```
-![image](https://github.com/user-attachments/assets/ae4279ee-5853-4fee-aeaa-bb3ce3a02151)
+![image](https://github.com/user-attachments/assets/4da276d6-0298-4871-a641-4d4415496e3e)
 
-### 6.	Access  to Grafana
+### 6. Get username & pw :
+![image](https://github.com/user-attachments/assets/94d4cec5-32dd-4106-8309-cef3b5244c88)
+
+### 7. Decoding username & pw : 
+![image](https://github.com/user-attachments/assets/569f9aec-9e62-435d-a075-6cdf353d1ed3)
+
+### 8.	Access  to Grafana
 ![image](https://github.com/user-attachments/assets/2edd4944-12f3-4eeb-bd83-f77bfcfbf9e3)
+
 
 ## Manual Creation of a Helm Chart
 ### Step 1: Create the Chart Directory
