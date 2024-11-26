@@ -319,10 +319,9 @@ gedit deployment.yaml
 kubectl apply -f deployment.yaml 
 ```
 
-* Verif
-![image](https://github.com/user-attachments/assets/e57b99bf-cdb8-413b-a201-aa24440fe2c5)
+* Verify
   
-![image](https://github.com/user-attachments/assets/17a4fdf0-5dfb-4de0-889c-1951389e6e02)
+![image](https://github.com/user-attachments/assets/8dfebffd-4ea2-4861-a2a3-3a8c8fa6a955)
 
 ## Deploy with Helm chart 
  ### 1.	Install Helm : From Script : 
