@@ -162,7 +162,7 @@ kubeadm join 10.5.13.166:6443 --token tc03nq.nwh5wkojg319vpaa \
 	--discovery-token-ca-cert-hash sha256:869b91d31611b0f64ae08d402bad1a5be636b8cfd5b9
 ```
 ### 6.Verify the worker node join the cluster : 
-![image](https://github.com/user-attachments/assets/d26e5a6f-534b-4f37-b04e-13f26bed2206)
+![image](https://github.com/user-attachments/assets/6ff5da31-884f-441a-92b5-5c824ebd9ac6)
 
 ### 7. Verify every thing is working :
 ![image](https://github.com/user-attachments/assets/d34f3da5-6fb0-4e27-aebb-2e2a0b1a0261)
