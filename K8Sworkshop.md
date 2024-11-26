@@ -200,7 +200,7 @@ sudo mv k9s /usr/local/bin/
  ```bash
 sudo chmod +x /usr/local/bin/k9s
 ```
-#### 5. Lancer k9s :
+#### 5. Lancer k9s : 
  ```bash
 k9s
 ```
@@ -212,48 +212,91 @@ k9s
 
 ![image](https://github.com/user-attachments/assets/4bec17ab-8eb2-4fdb-a632-b73084f594bf)
 
-## Configure Master node to lunch pods
+## Configure Master node to launch pods
+#### the default taint applied to a master node is : node-role.kubernetes.io/master:NoSchedule
 
+### Method 1: Remove the Taint :
  ```bash
-kubectl taint nodes --all node-role.kubernetes.io/k8smaster-
+kubectl taint nodes master node-role.kubernetes.io/master:NoSchedule-
 ```
-![image](https://github.com/user-attachments/assets/32dc5a84-b191-4947-bbad-9942b2d86354)
+![image](https://github.com/user-attachments/assets/ab439807-3059-420c-8ba4-8100cdfdb30c)
 
-### 1. Use Node Selector :
+#### 1. Create yaml file  :
 ```bash
-kubectl label nodes master node-role.kubernetes.io/master=true
+touch pod.yaml
+gedit pod.yaml
 ```
-![1](https://github.com/user-attachments/assets/5a89e7b0-40aa-45fc-8887-6e69050cca02)
+![image](https://github.com/user-attachments/assets/7c7822dc-8d7b-4234-b5ae-8cbeb35e5379)
 
-### 2. Create yaml file  :
+#### 2. Deploy the Pod :
+```bash
+kubectl apply -f pod.yaml
+```
+![image](https://github.com/user-attachments/assets/8af2f3c7-52c7-4d91-af2a-740c2ecb75a0)
+
+#### 3. Verify the Pod :
+```bash
+kubectl get pods -o wide
+```
+![image](https://github.com/user-attachments/assets/46217086-ba71-437d-89c6-173d02465d75)
+
+### Method 2 : Use Node Selector :
+```bash
+kubectl label nodes master role=master
+```
+![image](https://github.com/user-attachments/assets/b9a9b45f-7ea4-4f0a-83bd-6552e80cfdd6)
+
+#### 1. Create yaml file  :
 ```bash
 touch podMaster.yaml
 gedit podMaster.yaml
 ```
-![2](https://github.com/user-attachments/assets/e0845c68-52a0-41d7-ac03-7a6e9f7ca429)
+![image](https://github.com/user-attachments/assets/326a730c-f200-47d7-afa2-09069f21eb9d)
 
-### 3. Deploy the Pod :
+#### 2. Deploy the Pod :
 ```bash
 kubectl apply -f podMaster.yaml
 ```
 ![3](https://github.com/user-attachments/assets/7d43b374-1aae-478a-9ab8-b8c2f097cdc7)
 
-### 4. Verify the Pod :
+#### 3. Verify the Pod :
 ```bash
 kubectl get pods -o wide
-kubectl describe pod my-pod
+kubectl describe pod my-pod-master
 ```
-![4](https://github.com/user-attachments/assets/5181cd70-ae55-4fd2-8119-571e12032912)
+![image](https://github.com/user-attachments/assets/7b896f13-c455-4271-a361-983a29fcf031)
 
-![5](https://github.com/user-attachments/assets/8593c7a7-6de0-4601-ba99-6ef116ade18e)
+![image](https://github.com/user-attachments/assets/6cef363d-b8ad-4453-9dcf-dcba98f31559)
 
-### 5.	Access the pod :
+#### 4.	Access the pod :
 ```bash
-kubectl port-forward pod/my-pod 8081:80
+kubectl port-forward pod/my-pod-master 8081:80
 ```
-![image](https://github.com/user-attachments/assets/aea7db65-aae1-4ed0-9cf9-e835f121fbeb)
+![image](https://github.com/user-attachments/assets/542cc494-8c51-4dc2-adb9-9bce7a00ffb4)
 
 ![image](https://github.com/user-attachments/assets/6b3c79bf-9064-4329-adb1-00366a1e22d6)
+
+### Method 3 : Use Tolerations
+####  keep the master node tainted but still allow specific pods to run on it
+#### 1. Create Pod Definition with Tolerations :
+```bash
+touch podTolerance.yaml
+gedit podTolerance.yaml
+```
+![image](https://github.com/user-attachments/assets/27b0f83b-94f1-4829-90c1-f2bf0f4bda2e)
+
+#### 2. Deploy the Pod :
+```bash
+kubectl apply -f podTolerance.yaml
+```
+![image](https://github.com/user-attachments/assets/e7fc2034-462e-409b-801f-562af1e1ae20)
+
+#### 3. Verify the Pod :
+```bash
+kubectl get pods -o wide
+```
+![image](https://github.com/user-attachments/assets/7ff62193-e125-4c3d-a793-8160ecd20b59)
+
 
 ## Create a namespace "Development" on your k8s cluster
 ### 1.	Create namespace 'development' :
