@@ -171,10 +171,10 @@ kubeadm join 10.5.13.166:6443 --token tc03nq.nwh5wkojg319vpaa \
 ![image](https://github.com/user-attachments/assets/fc21952e-8efc-463a-88a1-b25bde547faf)
 
 ###  See pod running in specific node :
-![image](https://github.com/user-attachments/assets/d90acb4f-c507-4245-b8ef-f9a919e60e90)
+![image](https://github.com/user-attachments/assets/af581da0-ff6f-47b6-a168-246c43ff152a)
 
 ### Info of the cluster : 
-![image](https://github.com/user-attachments/assets/d6082580-89ba-44db-89fb-f1179105ad97)
+![image](https://github.com/user-attachments/assets/bfaaea1f-c34a-407d-8fc0-7405de9150ac)
 
 ### Describe a node : ( the same for a pod) 
 ![image](https://github.com/user-attachments/assets/bce0b06a-60f1-47f3-8314-ffb02bb6f1f4)
